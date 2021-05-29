@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style todo.css">
+  
+</head>
+<body>
+  
+  <nav class="navbar navbar-inverse navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">TODOs List</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        
+      </ul>
+    </div>
+          <div class="search" id="searchTxt">
+        <form class="form-inline" action="/action_page.php">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>
+      </div>
+      </nav>
+
+      <h1 class="heading">TODOs List</h1>
+
+  <form>
+    <div class="container">
+    <div class="form-group">
+      <label for="title" class="text">Title</label>
+      <input type="text" class="form-control" id="title" aria-describedby="titlehelp">
+      <small id="titlehelp" class="form-text text-muted"><br> Add an item to the list</small>
+    </div>
+    <div class="form-group">
+      <label for="description" class="text">Description</label>
+      <textarea class="form-control" id="description" cols="80" rows="10"></textarea>
+    </div>
+    <button id="add" class="btn btn-primary add">Add</button>
+
+
+    <button id="clear" class="btn btn-primary add " onclick="clearStorage()">Clear</button>
+  </div>
+  </form>
+
+
+  <div id="items" class="my-4">
+            <h2 class="items">Your Items</h2>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="text">SNo</th>
+                    <th scope="col" class="text">Item Title</th>
+                    <th scope="col"class="text">Item Description</th> 
+                    <th scope="col" class="text">Actions</th> 
+                  </tr>
+                </thead>
+                <tbody id="tableBody">
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Get some Coffee</td>
+                    <td>You need coffee as you are a coder</td> 
+                    <td><button class="btn btn-sm btn-primary">Delete</button></td> 
+                  </tr>
+                  
+                </tbody>
+              </table>
+        </div>
+
+        <script src="todo.js"></script>
+</body>
+</html>
